@@ -11,13 +11,17 @@
   </form>
 
   {% if swaras %}
-    <h3>Detected Swaras:</h3>
-    <ul>
-      {% for swara in swaras %}
-        <li>{{ swara }}</li>
-      {% endfor %}
-    </ul>
-    <a href="{{ url_for('download') }}">Download Swara Output</a>
+    <h3>Extracted Swaras:</h3>
+    <p>{{ swaras|join(" ") }}</p>
+
+    <h3>Audio Playback:</h3>
+    <audio controls>
+      <source src="{{ url_for('static', filename='swara_output.wav') }}" type="audio/wav">
+      Your browser does not support audio playback.
+    </audio>
+
+    <br><br>
+    <a href="{{ url_for('download') }}" class="btn btn-primary">Download Swaras (.txt)</a>
   {% endif %}
 </body>
 </html>
