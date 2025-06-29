@@ -4,7 +4,6 @@
   <title>Swara Detector</title>
 </head>
 <body>
-  <h2>🎵 Upload Audio File to Detect Swaras</h2>
   <form action="/analyze" method="POST" enctype="multipart/form-data">
     <input type="file" name="audiofile" accept=".wav, .mp3" required><br><br>
     <input type="submit" value="Analyze">
