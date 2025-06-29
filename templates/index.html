@@ -6,7 +6,7 @@
 <body>
   <h2>🎵 Upload Audio File to Detect Swaras</h2>
   <form action="/analyze" method="POST" enctype="multipart/form-data">
-    <input type="file" name="audiofile" accept=".wav, .mp3" required><br><br>
+    <input type="file" name="audiofile" accept=".wav,.mp3" required><br><br>
     <input type="submit" value="Analyze">
   </form>
 
@@ -21,7 +21,7 @@
     </audio>
 
     <br><br>
-    <a href="{{ url_for('download') }}" class="btn btn-primary">Download Swaras (.txt)</a>
+    <a href="{{ url_for('download') }}">Download Swaras (.txt)</a>
   {% endif %}
 </body>
 </html>
